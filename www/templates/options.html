@@ -1,0 +1,33 @@
+<ion-view title="Date/Resources">
+  <ion-content>
+<div class="item item-divider">
+      <p>
+        <h2>Date:</h2>
+      </p>
+<label class="item item-input">
+  <input type="date" ng-model="dates.choice" ng-value=defaultToday>
+</label>
+    </div>
+
+    <div class="item item-divider">
+      <p>
+        <h2>Resources:</h2>
+      </p>
+      <ion-radio ng-repeat="resource in resources" ng-model="options.choice" ng-value={{resource}}>
+        <p><b>{{resource.description}}</b></p>
+        <p>Resource ID: {{resource.emrID}}</p>
+      </ion-radio>
+    </div>
+
+    <div class="item item-divider">
+      <a href="#/" class="button button-full button-positive ion-person-stalker" ng-click="optionsUpdate(options.choice.resID, defaultToday, dates.choice)"> Update</a>
+    </div>
+
+  </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <h2 class="title">{{options.choice.description}}
+    </h2>
+  </ion-footer-bar>
+</ion-view>
+
+<!--href="#"-->

@@ -1,0 +1,22 @@
+<ion-view view-title="Appointment Detail">
+	<ion-content>
+		<div class="item item-divider">
+			<h1 class="title"><b>{{single.patLast}}, {{single.patFirst}}</b></h1>
+		</div>
+		<div class="item item-divider">
+			<p><b>Date:</b> {{single.appt_date}}</p>
+			<p><b>Time:</b> {{single.begintime}} - {{single.endtime}} <b>Duration:</b> {{single.duration}}</p>
+			<p><b>Type:</b> {{single.appt_type}} </p>
+			<p><b>Event:</b> {{single.event}} </p>
+			<p><b>Details:</b> {{single.details}}</p>
+			<p><b>Rendering:</b> {{single.rendering}}</p>
+			<p><b>Location:</b> {{single.location}}</p>
+			<p><b>Confirmed:</b> {{single.confirm_ind}} <b>Canceled:</b> {{single.cancel_ind}}</p>
+			<p><b>Appointment ID:</b> {{single.extID}}</p>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="bar-stable">
+		<h2 class="title">{{single.resource}}, {{single.appt_date}}
+		</h2>
+	</ion-footer-bar>
+</ion-view>
